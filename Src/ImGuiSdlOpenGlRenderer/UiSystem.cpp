@@ -9,6 +9,8 @@ namespace Scout
 {
 	void UiSystem_ImGui::Render()
 	{
+		if (!callbacks_.size()) return;
+
 		for (auto& callback : callbacks_)
 		{
 			ImGui_ImplSDLRenderer_NewFrame();
